@@ -320,6 +320,9 @@ async function get302URL(resObj) {
       }, 6000);
       const obj = await fetch(`${resObj.url}`, {
         method: "GET",
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36"
+        },
         redirect: "manual",
         signal: controller.signal
       }).catch(err => {
